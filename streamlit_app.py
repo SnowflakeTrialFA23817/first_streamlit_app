@@ -47,3 +47,6 @@ streamlit.dataframe(my_data_rows)
 #User input box to add fruit to list
 add_my_fruit = streamlit.text_input('What fruit would you like to add?','jackfruit')  #input box with default entry jackfruit
 streamlit.write('Thanks for adding ',add_my_fruit) #displays input value from input box
+
+#writeback to Snowflake - currently using test value rather than variable
+my_cur.execute("insert into fruit_load_list values ('from streamlit')")
